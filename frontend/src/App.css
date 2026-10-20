@@ -1,0 +1,337 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101820;
+  color: white;
+}
+
+.app {
+  max-width: 1300px;
+  margin: auto;
+  padding: 24px;
+}
+
+.app h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.editor {
+  background: #1c2935;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.editor-header h2 {
+  margin: 0 0 8px;
+}
+
+.editor-header p {
+  color: #b0bec9;
+  margin: 0;
+}
+
+button {
+  padding: 12px 20px;
+  background: #22c55e;
+  border: none;
+  border-radius: 6px;
+  color: #08200f;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.field {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  touch-action: none;
+  user-select: none;
+}
+
+.legend {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .editor-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+
+.editor-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.secondary-button {
+  background: #334155;
+  color: white;
+}
+
+.strategy-name {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.strategy-name input {
+  padding: 12px;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  background: #0f172a;
+  color: white;
+  font-size: 15px;
+  max-width: 400px;
+}
+
+.field-info {
+  margin-bottom: 12px;
+  color: #86efac;
+  font-weight: bold;
+}
+
+.timeline-panel {
+  background: #111d29;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+.timeline-panel h3 {
+  margin-top: 0;
+}
+
+.timeline-panel p {
+  color: #cbd5e1;
+}
+
+.timeline-frames {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.frame-button {
+  background: #334155;
+  color: white;
+}
+
+.frame-button.active {
+  background: #2563eb;
+  color: white;
+}
+
+.record-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.record-controls input {
+  width: 95px;
+  padding: 10px;
+  background: #0f172a;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  color: white;
+}
+
+.danger-button {
+  background: #dc2626;
+  color: white;
+}
+
+.danger-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.record-status {
+  min-height: 20px;
+  color: #86efac !important;
+}
+
+.record-summary {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .editor-actions,
+  .record-controls {
+    align-items: flex-start;
+  }
+}
+
+
+
+.playback-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.playback-controls select {
+  padding: 10px 14px;
+  background: #0f172a;
+  color: white;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.scrubber {
+  margin: 24px 0 30px;
+  padding: 16px;
+  background: #0f172a;
+  border-radius: 8px;
+}
+
+.scrubber input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+  accent-color: #22c55e;
+}
+
+.timeline-time {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #cbd5e1;
+  font-variant-numeric: tabular-nums;
+}
+
+.frame-button.active {
+  background: #2563eb;
+  color: white;
+  outline: 2px solid #93c5fd;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .playback-controls {
+    align-items: flex-start;
+  }
+
+  .scrubber {
+    padding: 10px;
+  }
+}
+
+
+.movement-recorder {
+  padding: 18px;
+  margin-bottom: 24px;
+  border: 1px solid #475569;
+  border-radius: 10px;
+  background: #172536;
+}
+
+.movement-recorder h3 {
+  margin-top: 0;
+}
+
+.record-button {
+  background: #be123c;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+
+.record-button.active {
+  background: #f43f5e;
+  outline: 2px solid white;
+}
+
+.recorder-hint {
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+
+/* Frisbee Throw Recorder */
+
+.throw-panel {
+  padding: 20px;
+  margin: 24px 0;
+  border: 1px solid #475569;
+  border-radius: 10px;
+  background: #172536;
+}
+
+.throw-panel h3 {
+  margin-top: 0;
+}
+
+.throw-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 18px 0;
+}
+
+.throw-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+.throw-controls input,
+.throw-controls select {
+  width: 150px;
+  padding: 10px;
+  background: #0f172a;
+  color: white;
+  border: 1px solid #475569;
+  border-radius: 6px;
+}
+
+.throw-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px;
+  margin-top: 10px;
+  background: #0f172a;
+  border-radius: 6px;
+}
+
+.throw-list-item button {
+  padding: 8px 12px;
+}
